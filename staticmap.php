@@ -287,7 +287,7 @@ Class staticMapLite
 
     public function tileUrlToFilename($url)
     {
-        return $this->tileCacheBaseDir . "/" . str_replace(array('http://'), '', $url);
+        return $this->tileCacheBaseDir . "/" . str_replace(array('https://'), '', $url);
     }
 
     public function checkTileCache($url)
