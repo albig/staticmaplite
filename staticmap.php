@@ -35,8 +35,9 @@ Class staticMapLite
     protected $maxHeight = 1024;
 
     protected $tileSize = 256;
-    protected $tileSrcUrl = array('mapnik' => 'http://tile.openstreetmap.org/{Z}/{X}/{Y}.png',
-        'cycle' => 'http://a.tile.opencyclemap.org/cycle/{Z}/{X}/{Y}.png',
+    protected $tileSrcUrl = array(
+	'mapnik' => 'https://tile.openstreetmap.org/{Z}/{X}/{Y}.png',
+        'cycle' => 'https://a.tile.opencyclemap.org/cycle/{Z}/{X}/{Y}.png',
     );
 
     protected $tileDefaultSrc = 'mapnik';
