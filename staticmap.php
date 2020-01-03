@@ -37,7 +37,7 @@ Class staticMapLite
     protected $tileSize = 256;
     protected $tileSrcUrl = array(
 	'mapnik' => 'https://tile.openstreetmap.org/{Z}/{X}/{Y}.png',
-        'cycle' => 'https://a.tile.opencyclemap.org/cycle/{Z}/{X}/{Y}.png',
+        'cycle' => 'https://tile.thunderforest.com/cycle/{Z}/{X}/{Y}.png',
     );
 
     protected $tileDefaultSrc = 'mapnik';
