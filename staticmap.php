@@ -31,8 +31,8 @@ ini_set('display_errors', 'off');
 Class staticMapLite
 {
 
-    protected $maxWidth = 1024;
-    protected $maxHeight = 1024;
+    protected $maxWidth = 2048;
+    protected $maxHeight = 2048;
 
     protected $tileSize = 256;
     protected $tileSrcUrl = array(
