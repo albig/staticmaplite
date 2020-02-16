@@ -36,7 +36,8 @@ Class staticMapLite
 
     protected $tileSize = 256;
     protected $tileSrcUrl = array(
-	'mapnik' => 'https://tile.openstreetmap.org/{Z}/{X}/{Y}.png',
+	'mapnik' => 'https://tile.openstreetmap.de/{Z}/{X}/{Y}.png',
+	'slub' => 'https://osm-cdn2.slub-dresden.de/osm_tiles/{Z}/{X}/{Y}.png',
         'cycle' => 'https://tile.thunderforest.com/cycle/{Z}/{X}/{Y}.png',
     );
 
@@ -351,7 +352,10 @@ Class staticMapLite
     public function copyrightNotice()
     {
         $logoImg = imagecreatefrompng($this->osmLogo);
-        imagecopy($this->image, $logoImg, imagesx($this->image) - imagesx($logoImg), imagesy($this->image) - imagesy($logoImg), 0, 0, imagesx($logoImg), imagesy($logoImg));
+	$textcolor = imagecolorallocate($im, 0, 0, 255);
+        imagecopy($this->image, $logoImg, imagesx($this->image) - imagesx($logoImg), imagesy($this->image) - imagesy($logoImg) -10 , 0, 0, imagesx($logoImg), imagesy($logoImg));
+	imagestring($this->image, 3, imagesx($this->image) - 190, imagesy($this->image) -16, 'OpenStreetMap contributors', $textcolor);
+
 
     }
 
